@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Playfair Display", serif;
+}
+
+body.dark-mode {
+  background-color: rgb(24, 24, 24);
+}
+
+/* Tous les textes principaux + textes sous images */
+body.dark-mode .text_contact,
+body.dark-mode .numéro {
+  color: white;
+}
+
+body.dark-mode .contact {
+    background-color: black;
+}
+
+
+body.dark-mode #darkModeBtn {
+  background-color: white;
+  color: #000;
+}
+
+.intro_text{
+    color: aliceblue;
+text-align: center;
+background-color: black;
+border: 2px solid black;
+}
+
+
+.contact{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.text_contact{
+    text-align: center;
+    margin-right: 50px;
+    color: black;
+}
+
+.numéro{
+    text-align: center;
+    margin-right: 50px;
+    color: black;
+}
+
+/*menu burger*/
+.header {
+  position: relative;
+  padding: 15px;
+  background-color: black; /* pour que le menu soit bien visible */
+}
+
+.burger {
+  width: 30px;
+  cursor: pointer;
+}
+
+/*barres*/
+.burger div {
+  display: block;
+  height: 3px;
+  background: white; /* barres noires en light mode */
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/*animation barres*/
+.burger.active .bar1 {
+  transform: rotate(45deg);
+}
+
+.burger.active .bar2 {
+  opacity: 0;
+}
+
+.burger.active .bar3 {
+  transform: rotate(-45deg);
+}
+
+/*boutons*/
+.nav {
+  text-align: center;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+
+.nav.active {
+  opacity: 1;
+}
+
+.nav a {
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+}

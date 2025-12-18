@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Playfair Display", serif;
+}
+
+body.dark-mode {
+  background-color: rgb(24, 24, 24);
+}
+
+/* tous les textes principaux en dark mode */
+body.dark-mode .intro_text,
+body.dark-mode .titre_text,
+body.dark-mode .text_joconde,
+body.dark-mode .sous_text_joconde,
+body.dark-mode .liberté,
+body.dark-mode .text_liberté4,
+body.dark-mode .sous_text_liberté,
+body.dark-mode .explication,
+body.dark-mode .sous_explication,
+body.dark-mode .contact, 
+body.dark-mode .text_contact,
+body.dark-mode .numéro,
+body.dark-mode .scan_photos {
+  color: white;
+}
+
+/* bordures en clair pour dark mode */
+body.dark-mode .titre_text,
+body.dark-mode .explication,
+body.dark-mode .contact {
+  border-color: white;
+}
+
+
+body.dark-mode #darkModeBtn {
+  background-color: white;
+  color: #000;
+}
+
+
+.intro_text{
+text-align: center;
+background-color: black;
+border: 2px solid black;
+
+}
+
+.titre_text{
+    margin-top: 10px;
+    color: black;
+    border: 2px solid black;
+    text-align: center;margin-left: 20px;
+margin-right: 20px;
+}
+
+.images{
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.photos{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 300px;
+    border: 2px solid rgb(135, 193, 255);
+    border-radius: 5px;
+    margin-left: 100px;
+margin-right: 100px;
+}
+
+.scan_photos{
+    margin-top: 40px;
+}
+
+.joconde{
+    margin-top: 1px;
+    position: relative;
+}
+
+.text_joconde{
+    position: absolute;
+    bottom: -15px;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.sous_text_joconde{
+      position: absolute;
+  bottom: -270px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+}
+
+.joconde:hover .sous_text_joconde{
+    opacity: 1;
+}
+
+.liberté{
+    margin-top: 50px;
+    position: relative;
+}
+
+.text_liberté{
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+}
+
+.sous_text_liberté{
+    position: absolute;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+}
+
+.liberté:hover .sous_text_liberté{
+    opacity: 1;
+}
+
+.explication{
+    margin-top: 10px;
+    border: 2px solid black;
+    text-align: center;
+    margin-left: 20px;
+margin-right: 20px;
+}
+
+.sous_explication{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.contact{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    border: 2px solid black;
+}
+
+.text_contact{
+    text-align: center;
+    margin-right: 50px;
+}
+
+.numéro{
+    text-align: center;
+    margin-right: 50px;
+}
+
+/*menu burger*/
+.header {
+  position: relative;
+  padding: 15px;
+  background-color: black; /* pour que le menu soit bien visible */
+}
+
+.burger {
+  width: 30px;
+  cursor: pointer;
+}
+
+/*barres*/
+.burger div {
+  display: block;
+  height: 3px;
+  background: white; /* barres noires en light mode */
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/*animation barres*/
+.burger.active .bar1 {
+  transform: rotate(45deg);
+}
+
+.burger.active .bar2 {
+  opacity: 0;
+}
+
+.burger.active .bar3 {
+  transform: rotate(-45deg);
+}
+
+/*boutons*/
+.nav {
+  text-align: center;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+
+.nav.active {
+  opacity: 1;
+}
+
+.nav a {
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+}

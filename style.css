@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Playfair Display", serif;
+}
+
+body.dark-mode {
+  background-color: rgb(24, 24, 24);
+}
+
+/*textes en dark mode*/
+body.dark-mode .titre_text,
+body.dark-mode .collection,
+body.dark-mode .sous_collection,
+body.dark-mode .text_collection,
+body.dark-mode .contact,
+body.dark-mode .text_contact,
+body.dark-mode .numéro,
+body.dark-mode .text_richelieu,
+body.dark-mode .text_denon,
+body.dark-mode .text_sully {
+  color: white;
+}
+
+/*bordure pour le dark mode*/
+body.dark-mode .titre_text, 
+body.dark-mode .collection,
+body.dark-mode .contact {
+  border-color: white;
+}
+
+
+body.dark-mode #darkModeBtn {
+  background-color: white;
+  color: #000;
+}
+
+
+
+.intro_text{
+    color: aliceblue;
+text-align: center;
+background-color: black;
+border: 2px solid black;
+}
+
+.titre_text{
+    margin-top: 10px;
+    color: black;
+    border: 2px solid black;
+    text-align: center;margin-left: 20px;
+margin-right: 20px;
+}
+
+.images{
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-around; /*pour mettre les photos les unes à côté des autres*/
+    cursor: pointer; /*faire afficher le texte quand on est sur l'image*/
+}
+
+.richelieu{
+    margin-top: 1px;
+    position: relative;
+}
+
+.text_richelieu{
+    position: absolute; 
+    bottom: -15px;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.sous_text_richelieu{
+      position: absolute;
+  bottom: -270px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0; /*faire disparaitre le texte quand on est pas sur l'image*/
+}
+.richelieu:hover .sous_text_richelieu {
+  opacity: 1;
+}
+
+.denon{
+    margin-top: 1px;
+    position: relative;
+}
+
+.text_denon{
+    position: absolute;
+    bottom: -15px;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.sous_text_denon{
+      position: absolute;
+  bottom: -175px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+}
+
+.denon:hover .sous_text_denon{
+    opacity: 1;
+}
+
+.sully{
+    margin-top: 1px;
+    position: relative;
+}
+
+.text_sully{
+    position: absolute;
+    bottom: -15px;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.sous_text_sully{
+    position: absolute;
+    bottom: -250px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+}
+
+.sully:hover .sous_text_sully{
+    opacity: 1;
+}
+
+.collection{
+    margin-top: 280px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.sous_collection{
+    text-align: left;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.images_collection{
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.jardinière{
+    margin-top: 1px;
+    position: relative;
+    margin-left: 1200px;
+}
+
+.david_et_goliat{
+    margin-top: 1px;
+    position: relative;
+    margin-left: 1200px;
+}
+
+.text_collection{
+    display: flex;
+    justify-content: right;
+}
+
+/*menu burger*/
+.header {
+  position: relative;
+  padding: 15px;
+  background-color: black; /* pour que le menu soit bien visible */
+}
+
+.burger {
+  width: 30px;
+  cursor: pointer;
+}
+
+/*barres*/
+.burger div {
+  display: block;
+  height: 3px;
+  background: white; /* barres noires en light mode */
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/*animation barres*/
+.burger.active .bar1 {
+  transform: rotate(45deg);
+}
+
+.burger.active .bar2 {
+  opacity: 0;
+}
+
+.burger.active .bar3 {
+  transform: rotate(-45deg);
+}
+
+/*boutons*/
+.nav {
+  text-align: center;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+
+.nav.active {
+  opacity: 1;
+}
+
+.nav a {
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+}
